@@ -6,48 +6,42 @@
   <title>reactStart | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="React -start
-##React
-
+React
 Facebook
 MVC中的V：M -&amp;gt; V
 和Flux搭配，可以做到MVVM
 默认转义所有字符串，防止XSS攻击
 React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
-##Why React?
-
-简单：model改变后，react自动处理用户">
+Why React?
+简单：model改变后，react自动处理用户界面的更新；">
 <meta property="og:type" content="article">
 <meta property="og:title" content="reactStart">
 <meta property="og:url" content="http://yoursite.com/2016/04/11/reactStart/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="React -start
-##React
-
+React
 Facebook
 MVC中的V：M -&amp;gt; V
 和Flux搭配，可以做到MVVM
 默认转义所有字符串，防止XSS攻击
 React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
-##Why React?
-
-简单：model改变后，react自动处理用户">
-<meta property="og:updated_time" content="2016-04-11T09:15:29.025Z">
+Why React?
+简单：model改变后，react自动处理用户界面的更新；">
+<meta property="og:updated_time" content="2016-04-11T10:41:13.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="reactStart">
 <meta name="twitter:description" content="React -start
-##React
-
+React
 Facebook
 MVC中的V：M -&amp;gt; V
 和Flux搭配，可以做到MVVM
 默认转义所有字符串，防止XSS攻击
 React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
-##Why React?
-
-简单：model改变后，react自动处理用户">
+Why React?
+简单：model改变后，react自动处理用户界面的更新；">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -119,27 +113,32 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
     <div class="article-entry" itemprop="articleBody">
       
         <p>React -start</p>
-<p>##React</p>
-<ul>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><ul>
 <li>Facebook</li>
 <li>MVC中的V：M -&gt; V</li>
 <li>和Flux搭配，可以做到MVVM</li>
 <li>默认转义所有字符串，防止XSS攻击</li>
 <li>React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间</li>
 </ul>
-<p>##Why React?</p>
-<ul>
+<h2 id="Why-React"><a href="#Why-React" class="headerlink" title="Why React?"></a>Why React?</h2><ul>
 <li>简单：<br>model改变后，react自动处理用户界面的更新；</li>
 <li>声明式：<br>更新界面时，react仅仅会更新变化的部分；</li>
 <li>虚拟Dom<br>React在内存中维护一个快速响应的DOM描述，并利用他来快速地计算出差异，然后更新浏览器中的DOM;</li>
 </ul>
-<p>##React 最需要走心的工作</p>
-<ul>
+<h2 id="React-最需要走心的工作"><a href="#React-最需要走心的工作" class="headerlink" title="React 最需要走心的工作"></a>React 最需要走心的工作</h2><ul>
 <li>构建可组合的、可复用的组件;</li>
 <li>组件的好处：代码复用、测试更加点多;</li>
 </ul>
-<p>##React - hello world<br>    &lt;!DOCTYPE html&gt;<br>    <html><br>        <head><br>            <title>React Hello World</title><br>            <script type="text/javascript" src="./react.js"></script><br>        </head><br>        <body><br>            <div id="app"></div></body></html></p>
-<pre><code>        &lt;script type=&quot;text/javascript&quot;&gt;
+<h2 id="React-hello-world"><a href="#React-hello-world" class="headerlink" title="React - hello world"></a>React - hello world</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;React Hello World&lt;/title&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;./react.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+
+        &lt;script type=&quot;text/javascript&quot;&gt;
             function h1 (text, style) {
                 return &apos;&lt;h1&gt;&apos;&apos; + text + &apos;&lt;/h1&gt;&apos;;
             }
@@ -148,8 +147,15 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>##React - 类似的工作<br>    &lt;!DOCTYPE html&gt;<br>    <html><br>        <head><br>            <title>React Hello World</title><br>        </head><br>        <body><br>            <div id="app"></div></body></html></p>
-<pre><code>        &lt;script type=&quot;text/javascript&quot;&gt;
+</code></pre><h2 id="React-类似的工作"><a href="#React-类似的工作" class="headerlink" title="React - 类似的工作"></a>React - 类似的工作</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;React Hello World&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+
+        &lt;script type=&quot;text/javascript&quot;&gt;
               function h1 (text, style) {
                 var result;
                 var styleStr;
@@ -175,32 +181,39 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
                 container.innerHTML = target;
               }
 
-              render(h1(&apos;Hello World!&apos;, {color: &apos;##00f&apos;}), document.getElementById(&apos;app&apos;));
+              render(h1(&apos;Hello World!&apos;, {color: &apos;#00f&apos;}), document.getElementById(&apos;app&apos;));
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>##JSX - Javascript XML<br>优势：</p>
+</code></pre><h2 id="JSX-Javascript-XML"><a href="#JSX-Javascript-XML" class="headerlink" title="JSX - Javascript XML"></a>JSX - Javascript XML</h2><p>优势：</p>
 <ul>
 <li>类HTML标记语言，都是熟悉的语法</li>
 <li>抽象了React Element的创建过程</li>
 <li>简单直观，可以提升效率且成本很低<br>劣势：</li>
 <li>在浏览器运行会很慢，项目中需要预处理</li>
 </ul>
-<p>##JSX - hello world<br>    &lt;!DOCTYPE html&gt;<br>    <html><br>        <head><br>            <title>React Hello World</title><br>            <script type="text/javascript" src="./react.js"></script><br>            <script type="text/javascript" src="./JSXTransformer.js"></script><br>        </head><br>        <body><br>            <div id="app"></div></body></html></p>
-<pre><code>        &lt;script type=&quot;text/jsx&quot;&gt;
+<h2 id="JSX-hello-world"><a href="#JSX-hello-world" class="headerlink" title="JSX - hello world"></a>JSX - hello world</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;React Hello World&lt;/title&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;./react.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;./JSXTransformer.js&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+
+        &lt;script type=&quot;text/jsx&quot;&gt;
             React.render(&lt;h1&gt;Hello World, JSX!&lt;/h1&gt;, document.getElementById(&apos;app&apos;));
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>##JSX - 工作原理</p>
-<ol>
+</code></pre><h2 id="JSX-工作原理"><a href="#JSX-工作原理" class="headerlink" title="JSX - 工作原理"></a>JSX - 工作原理</h2><ol>
 <li>使用JSXTransformer通过监听windows的onload/DOMContentLoaded，来遍历所有”text/jsx”脚本标签</li>
 <li>获取每个标签的source code并把JSX代码转为react的虚拟dom代码</li>
 <li>最后把react代码添加到新建的script标签中</li>
 <li>预编译的插件是同理，只不过发生在编译阶段</li>
 </ol>
-<p>##JSX Tips</p>
-<ul>
+<h2 id="JSX-Tips"><a href="#JSX-Tips" class="headerlink" title="JSX Tips"></a>JSX Tips</h2><ul>
 <li>JSX设置动态属性时，用花括号包裹Javascript变量</li>
 <li>也可以把属性设置为一个函数的调用返回结果</li>
 <li>条件判断支持：三元运输符、&amp;&amp;、||</li>
@@ -209,58 +222,47 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
 <li>HTML关键词：for &gt; htmlFor, class &gt; className, style: {}</li>
 <li>事件统一使用驼峰式</li>
 </ul>
-<p>##React Tips</p>
-<ul>
+<h2 id="React-Tips"><a href="#React-Tips" class="headerlink" title="React Tips"></a>React Tips</h2><ul>
 <li>React创建的class名称首字母必须大写，不然找不到</li>
 <li>JSX可以不换行，换行时必须使用（）包装，不然会报非法组件错误；</li>
 <li>只能有根一个节点，多个节点会抛错</li>
 <li>内联样式支持对象，名称使用驼峰式，否则不起作用，fontSize</li>
 <li>返回：null、false、React组件</li>
 </ul>
-<p>##组件的复合</p>
-<ul>
+<h2 id="组件的复合"><a href="#组件的复合" class="headerlink" title="组件的复合"></a>组件的复合</h2><ul>
 <li>复用那些接口定义良好的组件来开发新的模块化组件</li>
 <li>this.props.children X</li>
 <li>组件支持 ref=”refId”  this.refs.refId</li>
 </ul>
-<p>##React - 组件数据流</p>
-<ul>
+<h2 id="React-组件数据流"><a href="#React-组件数据流" class="headerlink" title="React - 组件数据流"></a>React - 组件数据流</h2><ul>
 <li>props</li>
 <li>state</li>
 </ul>
-<p>##React - dom对象</p>
-<ul>
+<h2 id="React-dom对象"><a href="#React-dom对象" class="headerlink" title="React - dom对象"></a>React - dom对象</h2><ul>
 <li>refs</li>
 </ul>
-<p>##React - 组件生命周期</p>
-<p>###组件类创建时</p>
-<ul>
+<h2 id="React-组件生命周期"><a href="#React-组件生命周期" class="headerlink" title="React - 组件生命周期"></a>React - 组件生命周期</h2><h3 id="组件类创建时"><a href="#组件类创建时" class="headerlink" title="组件类创建时"></a>组件类创建时</h3><ul>
 <li>getDefaultProps</li>
 </ul>
-<p>###初始化</p>
-<ul>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ul>
 <li>getinitialState</li>
 </ul>
-<p>###挂载</p>
-<ul>
+<h3 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h3><ul>
 <li>componentWillMount</li>
 <li>render</li>
 <li>componentDidMount</li>
 </ul>
-<p>###更新</p>
-<ul>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><ul>
 <li>componentWillReceiveProps</li>
 <li>shouldComponentUpdate</li>
 <li>componentWillUpdate</li>
 <li>render</li>
 <li>componentDidUpdate</li>
 </ul>
-<p>###卸载</p>
-<ul>
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><ul>
 <li>componentWillUnmount</li>
 </ul>
-<p>###生命周期</p>
-<ul>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><ul>
 <li>Class Create Pahses:<ul>
 <li>invoke while class created and be shared between instances.</li>
 </ul>
@@ -300,14 +302,31 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
 </ul>
 </li>
 </ul>
-<p>##Mixin</p>
-<ul>
+<h2 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h2><ul>
 <li>独立于组件的</li>
 <li>多个组件可共享的</li>
 <li>对象类型的配置</li>
 </ul>
-<p>##Mixin - DEMO<br>    var userMixin = {<br>        getDefaultProps: function () {<br>            return {<br>                username: ‘小红’<br>            };<br>        },<br>        renderUser: function (welcomeMsg) {<br>            return (<br>                    <div classname="user-wrap"><br>                        <span ref="welcomeDesc" classname="welcome-user">{welcomeMsg}</span><br>                    </div><br>                );<br>        },<br>        componentDidMount: function () {<br>            console.log(‘mount’);<br>        }<br>    }</p>
-<pre><code>var Header = React.createClass({
+<h2 id="Mixin-DEMO"><a href="#Mixin-DEMO" class="headerlink" title="Mixin - DEMO"></a>Mixin - DEMO</h2><pre><code>var userMixin = {
+    getDefaultProps: function () {
+        return {
+            username: &apos;小红&apos;
+        };
+    },
+    renderUser: function (welcomeMsg) {
+        return (
+                &lt;div className=&quot;user-wrap&quot;&gt;
+                    &lt;span ref=&quot;welcomeDesc&quot; className=&quot;welcome-user&quot;&gt;{welcomeMsg}&lt;/span&gt;
+                &lt;/div&gt;
+            );
+    },
+    componentDidMount: function () {
+        console.log(&apos;mount&apos;);
+    }
+}
+
+
+var Header = React.createClass({
     mixins: [userMixin],
     getInitialState: function () {
         return {
@@ -329,15 +348,14 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
             );
     }
 });
-</code></pre><p>##React - PureRenderMixin</p>
-<ul>
+</code></pre><h2 id="React-PureRenderMixin"><a href="#React-PureRenderMixin" class="headerlink" title="React - PureRenderMixin"></a>React - PureRenderMixin</h2><ul>
 <li>React组件的渲染函数是“纯粹的” - 同样的props和state，渲染出同样的效果</li>
 <li>可以提升性能 - 在shouldComponentUpdate里检查props、state是否会发生变化</li>
 <li>shouldComponentUpdate的判断结果会影响整个组件子树</li>
 <li>据说props、state比较是浅比较，不适合(特别)复杂的数据结构 x</li>
 </ul>
-<p>##PureRenderMixin - shouldComponentUpdate: shallow check<br>    /**</p>
-<pre><code> - Performs equality by iterating through keys on an object and returning false
+<h2 id="PureRenderMixin-shouldComponentUpdate-shallow-check"><a href="#PureRenderMixin-shouldComponentUpdate-shallow-check" class="headerlink" title="PureRenderMixin - shouldComponentUpdate: shallow check"></a>PureRenderMixin - shouldComponentUpdate: shallow check</h2><pre><code>/**
+ - Performs equality by iterating through keys on an object and returning false
  - when any key has values which are not strictly equal between the arguments.
  - Returns true when the values of all keys are strictly equal.
  */
@@ -367,42 +385,53 @@ function shallowEqual(objA, objB) {
 
   return true;
 }
-</code></pre><p>###React - Mixin原理</p>
-<ul>
+</code></pre><h3 id="React-Mixin原理"><a href="#React-Mixin原理" class="headerlink" title="React - Mixin原理"></a>React - Mixin原理</h3><ul>
 <li>Mixin必须是一个对象</li>
 <li>在React.createClass（源码：ReactClass &gt; createClass: function (spec) {…}会把Mixin对象融入react对象</li>
 <li>融入过程是通过遍历Mixin的属性（for..in）逐个添加到react对象得prototype上（mixSpecIntoComponent）</li>
 <li>添加之前需要判断是否已经有了相同属性，且此属性是否支持覆盖、是否支持多个、是否需要合并</li>
 <li>添加的方式是：覆盖（override）、合并、多个函数链</li>
 </ul>
-<p>###React - Mixin融合方式的标准</p>
-<ul>
+<h3 id="React-Mixin融合方式的标准"><a href="#React-Mixin融合方式的标准" class="headerlink" title="React - Mixin融合方式的标准"></a>React - Mixin融合方式的标准</h3><ul>
 <li>一些基础的属性是不允许覆盖的，比如：setProps、replaceProps、replaceState、isMounted</li>
 <li>渲染的属性是不允许定义多次的，比如：render、shouldComponentUpdate</li>
 <li>需要合并的是那些有返回值的，比如：getDefaultProps、getInitialState</li>
 <li>其他的都支持多个函数链的形式（先执行已有的，在执行Mixin的），比如：willMount、didMount、willUpdate、didUpdate等等</li>
 </ul>
-<p>##React - 表单组件</p>
-<p>###受用户交互影响的属性</p>
-<ul>
+<h2 id="React-表单组件"><a href="#React-表单组件" class="headerlink" title="React - 表单组件"></a>React - 表单组件</h2><h3 id="受用户交互影响的属性"><a href="#受用户交互影响的属性" class="headerlink" title="受用户交互影响的属性"></a>受用户交互影响的属性</h3><ul>
 <li>value，用于 input、textarea 组件</li>
 <li>checked，用于类型为 checkbox 或者 radio 的 input 组件</li>
 <li>selected，用于 option 组件</li>
 </ul>
-<p>###onChange 回调函数来监听组件变化</p>
-<ul>
+<h3 id="onChange-回调函数来监听组件变化"><a href="#onChange-回调函数来监听组件变化" class="headerlink" title="onChange 回调函数来监听组件变化"></a>onChange 回调函数来监听组件变化</h3><ul>
 <li>input 或 textarea 的 value 发生变化时。</li>
 <li>input 的 checked 状态改变时。</li>
 <li>option 的 selected 状态改变时。</li>
 </ul>
-<p>###Controlled Components - 受限组件</p>
-<ul>
+<h3 id="Controlled-Components-受限组件"><a href="#Controlled-Components-受限组件" class="headerlink" title="Controlled Components - 受限组件"></a>Controlled Components - 受限组件</h3><ul>
 <li>设置了 value 的 input 是一个受限组件</li>
 </ul>
-<p>###受限组件 - DEMO<br>    var App = React.createClass({<br>        getInitialState: function () {<br>            return {<br>                phone: ‘15821466666’<br>            };<br>        },<br>        render: function () {<br>            return (<br>                    <div><br>                        <label htmlfor="phone">手机号：</label><br>                        <input type="text" id="phone" value="{this.state.phone}" onchange="{this.phoneChangeHlr}"><br>                    </div><br>                );<br>        },<br>        phoneChangeHlr: function (event) {<br>            this.setState({phone: event.target.value});<br>        }<br>    });</p>
-<pre><code>ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;app&apos;));
-</code></pre><p>##React - add-ons</p>
-<ul>
+<h3 id="受限组件-DEMO"><a href="#受限组件-DEMO" class="headerlink" title="受限组件 - DEMO"></a>受限组件 - DEMO</h3><pre><code>var App = React.createClass({
+    getInitialState: function () {
+        return {
+            phone: &apos;15821466666&apos;
+        };
+    },
+    render: function () {
+        return (
+                &lt;div&gt;
+                    &lt;label htmlFor=&quot;phone&quot;&gt;手机号：&lt;/label&gt;
+                    &lt;input type=&apos;text&apos; id=&quot;phone&quot; value={this.state.phone} onChange={this.phoneChangeHlr} /&gt;
+                &lt;/div&gt;
+            );
+    },
+    phoneChangeHlr: function (event) {
+        this.setState({phone: event.target.value});
+    }
+});
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;app&apos;));
+</code></pre><h2 id="React-add-ons"><a href="#React-add-ons" class="headerlink" title="React - add-ons"></a>React - add-ons</h2><ul>
 <li>TransitionGroup和CSSTransitionGroup</li>
 <li>LinkedStateMixin - 用于简化用户表单输入数据和组件 state 之间的双向数据绑定</li>
 <li>classSet，用于更加干净简洁地操作 DOM 中的 class 字符串</li>
@@ -410,18 +439,34 @@ function shallowEqual(objA, objB) {
 <li>update，一个辅助方法，使得在 JavaScript 中处理不可变数据更加容易</li>
 <li>PureRenderMixin，在某些场景下的性能检测器</li>
 </ul>
-<p>##LinkedStateMixin - DEMO<br>    var LinkedStateMixin = React.addons.LinkedStateMixin;<br>    var App = React.createClass({<br>        mixins: [LinkedStateMixin],<br>        getInitialState: function () {<br>            return {<br>                phone: ‘15821466666’<br>            };<br>        },<br>        render: function () {<br>            return (<br>                    <div><br>                        <label htmlfor="phone">手机号：</label><br>                        <input type="text" id="phone" valuelink="{this.linkState('phone')}"><br>                    </div><br>                );<br>        }<br>    });</p>
-<pre><code>ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;app&apos;));
-</code></pre><p>##开发工具webpack</p>
-<p>###webpack + react install</p>
-<ul>
+<h2 id="LinkedStateMixin-DEMO"><a href="#LinkedStateMixin-DEMO" class="headerlink" title="LinkedStateMixin - DEMO"></a>LinkedStateMixin - DEMO</h2><pre><code>var LinkedStateMixin = React.addons.LinkedStateMixin;
+var App = React.createClass({
+    mixins: [LinkedStateMixin],
+    getInitialState: function () {
+        return {
+            phone: &apos;15821466666&apos;
+        };
+    },
+    render: function () {
+        return (
+                &lt;div&gt;
+                    &lt;label htmlFor=&quot;phone&quot;&gt;手机号：&lt;/label&gt;
+                    &lt;input type=&apos;text&apos; id=&quot;phone&quot; valueLink={this.linkState(&apos;phone&apos;)}  /&gt;
+                &lt;/div&gt;
+            );
+    }
+});
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;app&apos;));
+</code></pre><h2 id="开发工具webpack"><a href="#开发工具webpack" class="headerlink" title="开发工具webpack"></a>开发工具webpack</h2><h3 id="webpack-react-install"><a href="#webpack-react-install" class="headerlink" title="webpack + react install"></a>webpack + react install</h3><ul>
 <li>npm init</li>
 <li>npm install –save react react</li>
 <li>npm install –save-dev webpack webpack-dev-server</li>
 <li>npm install –save-dev jsx-loader css-loader file-loader style-loader url-loader</li>
 </ul>
-<p>###Configuring webpack<br>    var webpack = require(‘webpack’);</p>
-<pre><code>module.exports = {
+<h3 id="Configuring-webpack"><a href="#Configuring-webpack" class="headerlink" title="Configuring webpack"></a>Configuring webpack</h3><pre><code>var webpack = require(&apos;webpack&apos;);
+
+module.exports = {
     // 它定义了打包的入口文件，数组中的文件会按顺序进行，并且它会自行解决依赖问题。
     entry: {
         main: &apos;./pages/main.js&apos;,
@@ -457,7 +502,7 @@ function shallowEqual(objA, objB) {
         new webpack.NoErrorsPlugin(),
     ]
 }
-</code></pre><p>###Webpack 命令<br>启动webpack命令</p>
+</code></pre><h3 id="Webpack-命令"><a href="#Webpack-命令" class="headerlink" title="Webpack 命令"></a>Webpack 命令</h3><p>启动webpack命令</p>
 <ul>
 <li>webpack -d 提供SourceMaps，方便调试</li>
 <li>webpack -w 提供watch方法，实时进行打包更新</li>
@@ -467,45 +512,40 @@ function shallowEqual(objA, objB) {
 <li>webpack -p 对打包后的文件进行压缩</li>
 <li>webpack –config <filename> 支持指定实用的配置文件，处理release和debug不同的情况</filename></li>
 </ul>
-<p>###配置scripts<br>    “scripts”: {<br>        “locDev”: “webpack -d -w –progress –colors”,<br>        “serDev”: “webpack-dev-server –progress –colors –port 8082”<br>    }</p>
-<p>###运行</p>
-<ul>
+<h3 id="配置scripts"><a href="#配置scripts" class="headerlink" title="配置scripts"></a>配置scripts</h3><pre><code>&quot;scripts&quot;: {
+    &quot;locDev&quot;: &quot;webpack -d -w --progress --colors&quot;,
+    &quot;serDev&quot;: &quot;webpack-dev-server --progress --colors --port 8082&quot;
+}
+</code></pre><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><ul>
 <li>npm run locDev</li>
 <li>npm run serDev</li>
 </ul>
-<p>###React - 热插拔</p>
-<ul>
+<h3 id="React-热插拔"><a href="#React-热插拔" class="headerlink" title="React - 热插拔"></a>React - 热插拔</h3><ul>
 <li>npm install –save-dev react-hot-loader</li>
 <li>webpack.config.js: entry 使用数组，并添加 ‘webpack/hot/only-dev-server’</li>
 <li>webpack.config.js: loaders: [‘react-hot’, ‘jsx?harmony’]</li>
 <li>入口文件添加 module.hot.accept()</li>
 <li>启动：webpack-dev-server -d –port 8082 –hot –progress –colors</li>
 </ul>
-<p>###React - 热拔插多个入口</p>
-<ul>
+<h3 id="React-热拔插多个入口"><a href="#React-热拔插多个入口" class="headerlink" title="React - 热拔插多个入口"></a>React - 热拔插多个入口</h3><ul>
 <li>webpack.config.js: entry:<br>  entry: {<pre><code>main: [&apos;./pages/main/index.js&apos;, &apos;webpack/hot/only-dev-server&apos;],
 help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos;]
 </code></pre>  }</li>
 </ul>
-<p>##React - render时机</p>
-<p>###批量更新 - 事件回调函数</p>
-<ul>
+<h2 id="React-render时机"><a href="#React-render时机" class="headerlink" title="React - render时机"></a>React - render时机</h2><h3 id="批量更新-事件回调函数"><a href="#批量更新-事件回调函数" class="headerlink" title="批量更新 - 事件回调函数"></a>批量更新 - 事件回调函数</h3><ul>
 <li>事件处理函数中的多次setState/replaceState会被标记为一次批量更新</li>
 <li>事件处理函数本身在React事件机制中是作为一个回调函数被调用，在函数执行完成后才会触发render</li>
 </ul>
-<p>###实时更新 - 其他</p>
-<ul>
+<h3 id="实时更新-其他"><a href="#实时更新-其他" class="headerlink" title="实时更新 - 其他"></a>实时更新 - 其他</h3><ul>
 <li>调用setState/replaceState后直接触发render，比如setInterval</li>
 </ul>
-<p>###render流程</p>
-<ul>
+<h3 id="render流程"><a href="#render流程" class="headerlink" title="render流程"></a>render流程</h3><ul>
 <li>setState/replaceState 修改状态后</li>
 <li>组件添加等待更新的状态列表，并把新的状态压入列表（ReactUpdateQueue.js: enqueueSetState()）</li>
 <li>标记组件为需要重新渲染的组件（dirty components list）ReactUpdates：enqueueUpdate()</li>
 <li>runBatchedUpdates来处理dirty components（调用对应的render）</li>
 </ul>
-<p>##React - React事件系统</p>
-<ol>
+<h2 id="React-React事件系统"><a href="#React-React事件系统" class="headerlink" title="React - React事件系统"></a>React - React事件系统</h2><ol>
 <li>React初始化时会把事件监听 ReactEventListener 注入到 ReactBrowserEventEmitter</li>
 <li>ReactBrowserEventEmitter 是浏览器事件的顶级委托，ReactEventListener 为用户绑定事件的DOM绑定自己的处理函数，并在处理函数中调用用户的事件处理函数，然后理render相关逻辑；</li>
 <li>React 事件系统：<ul>
