@@ -1,7 +1,7 @@
 ---
 title: reactStart
 date: 2016-04-11 17:15:05
-tags:
+tags: react
 ---
 React -start
 
@@ -13,16 +13,16 @@ React -start
 - React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
 ## Why React?
-- 简单：
+- 简单:  
   model改变后，react自动处理用户界面的更新；
-- 声明式：
+- 声明式:  
   更新界面时，react仅仅会更新变化的部分；
-- 虚拟Dom
+- 虚拟Dom:  
   React在内存中维护一个快速响应的DOM描述，并利用他来快速地计算出差异，然后更新浏览器中的DOM;
 
 ## React 最需要走心的工作
 - 构建可组合的、可复用的组件;
-- 组件的好处：代码复用、测试更加点多;
+- 组件的好处：代码复用、测试简单;
 
 ## React - hello world
     <!DOCTYPE html>
@@ -38,7 +38,7 @@ React -start
                 function h1 (text, style) {
                     return '<h1>'' + text + '</h1>';
                 }
-                var el = React.createElement('h1', {style: {color: '##00f'}}, 'Hello World!');
+                var el = React.createElement('h1', {style: {color: '#00f'}}, 'Hello World!');
                 React.render(el, document.getElementById('app'));
             </script>
         </body>
@@ -86,12 +86,12 @@ React -start
     </html>
 
 ## JSX - Javascript XML
-优势：
-- 类HTML标记语言，都是熟悉的语法
-- 抽象了React Element的创建过程
-- 简单直观，可以提升效率且成本很低
-劣势：
-- 在浏览器运行会很慢，项目中需要预处理
+- 优势：
+    + 类HTML标记语言，都是熟悉的语法
+    + 抽象了React Element的创建过程
+    + 简单直观，可以提升效率且成本很低
+- 劣势：
+    + 在浏览器运行会很慢，项目中需要预处理
 
 ## JSX - hello world
     <!DOCTYPE html>
@@ -134,8 +134,8 @@ React -start
 
 ## 组件的复合
 - 复用那些接口定义良好的组件来开发新的模块化组件
-- this.props.children X
-- 组件支持 ref="refId"  this.refs.refId
+- 官网提供的获取子组件的方法：this.props.children X
+- 组件支持 ref="refId"，访问元素：this.refs.refId
 
 ## React - 组件数据流
 - props
@@ -167,10 +167,9 @@ React -start
 ### 卸载
 - componentWillUnmount
 
-### 生命周期
-- Class Create Pahses:
-    + invoke while class created and be shared between instances.
-- Initialization Pahses:
+### Class Create Pahses:
+    + getDefaultProps: invoke while class created and be shared between instances.
+### Initialization Pahses:
     + constructor: Initialization of state. The instance is now retained.
     + componentWillMount
     + render
@@ -178,14 +177,14 @@ React -start
         - [children's componentWillMount and render]
         - [children's componentDidMount]
     + componentDidMount
-- Update Phases:
+### Update Phases:
     + componentWillReceiveProps (only called if parent updated)
     + shouldComponentUpdate (default: always returns true to prevent subtle bugs)
         - componentWillUpdate
         - render
             + [children's constructors or receive props phases]
         - componentDidUpdate
-- Unmount Phases:
+### Unmount Phases:
     + componentWillUnmount
         - [children's componentWillUnmount]
         - [children destroyed]
@@ -239,11 +238,24 @@ React -start
         }
     });
 
+## React - Mixin原理
+- Mixin必须是一个对象
+- 在React.createClass（源码：ReactClass > createClass: function (spec) {...}会把Mixin对象融入react对象
+- 融入过程是通过遍历Mixin的属性（for..in）逐个添加到react对象得prototype上（mixSpecIntoComponent）
+- 添加之前需要判断是否已经有了相同属性，且此属性是否支持覆盖、是否支持多个、是否需要合并
+- 添加的方式是：覆盖（override）、合并、多个函数链
+
+## React - Mixin融合方式的标准
+- 一些基础的属性是不允许覆盖的，比如：setProps、replaceProps、replaceState、isMounted
+- 渲染的属性是不允许定义多次的，比如：render、shouldComponentUpdate
+- 需要合并的是那些有返回值的，比如：getDefaultProps、getInitialState
+- 其他的都支持多个函数链的形式（先执行已有的，在执行Mixin的），比如：willMount、didMount、willUpdate、didUpdate等等
+
 ## React - PureRenderMixin
 - React组件的渲染函数是“纯粹的” - 同样的props和state，渲染出同样的效果
 - 可以提升性能 - 在shouldComponentUpdate里检查props、state是否会发生变化
 - shouldComponentUpdate的判断结果会影响整个组件子树
-- 据说props、state比较是浅比较，不适合(特别)复杂的数据结构 x
+- 据说props、state比较是浅比较，不适合(特别)复杂的数据结构
 
 ## PureRenderMixin - shouldComponentUpdate: shallow check
     /**
@@ -277,19 +289,6 @@ React -start
 
       return true;
     }
-
-### React - Mixin原理
-- Mixin必须是一个对象
-- 在React.createClass（源码：ReactClass > createClass: function (spec) {...}会把Mixin对象融入react对象
-- 融入过程是通过遍历Mixin的属性（for..in）逐个添加到react对象得prototype上（mixSpecIntoComponent）
-- 添加之前需要判断是否已经有了相同属性，且此属性是否支持覆盖、是否支持多个、是否需要合并
-- 添加的方式是：覆盖（override）、合并、多个函数链
-
-### React - Mixin融合方式的标准
-- 一些基础的属性是不允许覆盖的，比如：setProps、replaceProps、replaceState、isMounted
-- 渲染的属性是不允许定义多次的，比如：render、shouldComponentUpdate
-- 需要合并的是那些有返回值的，比如：getDefaultProps、getInitialState
-- 其他的都支持多个函数链的形式（先执行已有的，在执行Mixin的），比如：willMount、didMount、willUpdate、didUpdate等等
 
 ## React - 表单组件
 

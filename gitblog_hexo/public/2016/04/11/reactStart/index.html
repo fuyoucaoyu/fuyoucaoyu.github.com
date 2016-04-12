@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>reactStart | Hexo</title>
+  <title>reactStart | fuyoucaoyu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="React -start
 React
@@ -14,11 +14,11 @@ MVC中的V：M -&amp;gt; V
 React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
 Why React?
-简单：model改变后，react自动处理用户界面的更新；">
+简单:model改变后，react自动处理用户界面的更新；">
 <meta property="og:type" content="article">
 <meta property="og:title" content="reactStart">
 <meta property="og:url" content="http://yoursite.com/2016/04/11/reactStart/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="fuyoucaoyu">
 <meta property="og:description" content="React -start
 React
 Facebook
@@ -28,8 +28,8 @@ MVC中的V：M -&amp;gt; V
 React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
 Why React?
-简单：model改变后，react自动处理用户界面的更新；">
-<meta property="og:updated_time" content="2016-04-11T10:41:13.453Z">
+简单:model改变后，react自动处理用户界面的更新；">
+<meta property="og:updated_time" content="2016-04-12T02:34:02.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="reactStart">
 <meta name="twitter:description" content="React -start
@@ -41,9 +41,9 @@ MVC中的V：M -&amp;gt; V
 React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间
 
 Why React?
-简单：model改变后，react自动处理用户界面的更新；">
+简单:model改变后，react自动处理用户界面的更新；">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="fuyoucaoyu" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -64,7 +64,7 @@ Why React?
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">fuyoucaoyu</a>
       </h1>
       
     </div>
@@ -121,13 +121,13 @@ Why React?
 <li>React认为HTML标签及生成这些标签的代码间存在着内在联系，React设计允许你在构建标签结构时充分利用JS的强大能力，而不必在笨拙的模板语言上浪费时间</li>
 </ul>
 <h2 id="Why-React"><a href="#Why-React" class="headerlink" title="Why React?"></a>Why React?</h2><ul>
-<li>简单：<br>model改变后，react自动处理用户界面的更新；</li>
-<li>声明式：<br>更新界面时，react仅仅会更新变化的部分；</li>
-<li>虚拟Dom<br>React在内存中维护一个快速响应的DOM描述，并利用他来快速地计算出差异，然后更新浏览器中的DOM;</li>
+<li>简单:<br>model改变后，react自动处理用户界面的更新；</li>
+<li>声明式:<br>更新界面时，react仅仅会更新变化的部分；</li>
+<li>虚拟Dom:<br>React在内存中维护一个快速响应的DOM描述，并利用他来快速地计算出差异，然后更新浏览器中的DOM;</li>
 </ul>
 <h2 id="React-最需要走心的工作"><a href="#React-最需要走心的工作" class="headerlink" title="React 最需要走心的工作"></a>React 最需要走心的工作</h2><ul>
 <li>构建可组合的、可复用的组件;</li>
-<li>组件的好处：代码复用、测试更加点多;</li>
+<li>组件的好处：代码复用、测试简单;</li>
 </ul>
 <h2 id="React-hello-world"><a href="#React-hello-world" class="headerlink" title="React - hello world"></a>React - hello world</h2><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -142,7 +142,7 @@ Why React?
             function h1 (text, style) {
                 return &apos;&lt;h1&gt;&apos;&apos; + text + &apos;&lt;/h1&gt;&apos;;
             }
-            var el = React.createElement(&apos;h1&apos;, {style: {color: &apos;##00f&apos;}}, &apos;Hello World!&apos;);
+            var el = React.createElement(&apos;h1&apos;, {style: {color: &apos;#00f&apos;}}, &apos;Hello World!&apos;);
             React.render(el, document.getElementById(&apos;app&apos;));
         &lt;/script&gt;
     &lt;/body&gt;
@@ -185,12 +185,17 @@ Why React?
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h2 id="JSX-Javascript-XML"><a href="#JSX-Javascript-XML" class="headerlink" title="JSX - Javascript XML"></a>JSX - Javascript XML</h2><p>优势：</p>
-<ul>
+</code></pre><h2 id="JSX-Javascript-XML"><a href="#JSX-Javascript-XML" class="headerlink" title="JSX - Javascript XML"></a>JSX - Javascript XML</h2><ul>
+<li>优势：<ul>
 <li>类HTML标记语言，都是熟悉的语法</li>
 <li>抽象了React Element的创建过程</li>
-<li>简单直观，可以提升效率且成本很低<br>劣势：</li>
+<li>简单直观，可以提升效率且成本很低</li>
+</ul>
+</li>
+<li>劣势：<ul>
 <li>在浏览器运行会很慢，项目中需要预处理</li>
+</ul>
+</li>
 </ul>
 <h2 id="JSX-hello-world"><a href="#JSX-hello-world" class="headerlink" title="JSX - hello world"></a>JSX - hello world</h2><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -231,8 +236,8 @@ Why React?
 </ul>
 <h2 id="组件的复合"><a href="#组件的复合" class="headerlink" title="组件的复合"></a>组件的复合</h2><ul>
 <li>复用那些接口定义良好的组件来开发新的模块化组件</li>
-<li>this.props.children X</li>
-<li>组件支持 ref=”refId”  this.refs.refId</li>
+<li>官网提供的获取子组件的方法：this.props.children X</li>
+<li>组件支持 ref=”refId”，访问元素：this.refs.refId</li>
 </ul>
 <h2 id="React-组件数据流"><a href="#React-组件数据流" class="headerlink" title="React - 组件数据流"></a>React - 组件数据流</h2><ul>
 <li>props</li>
@@ -262,47 +267,25 @@ Why React?
 <h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><ul>
 <li>componentWillUnmount</li>
 </ul>
-<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><ul>
-<li>Class Create Pahses:<ul>
-<li>invoke while class created and be shared between instances.</li>
-</ul>
-</li>
-<li>Initialization Pahses:<ul>
-<li>constructor: Initialization of state. The instance is now retained.</li>
-<li>componentWillMount</li>
-<li>render</li>
-<li>[children’s constructors]<ul>
-<li>[children’s componentWillMount and render]</li>
-<li>[children’s componentDidMount]</li>
-</ul>
-</li>
-<li>componentDidMount</li>
-</ul>
-</li>
-<li>Update Phases:<ul>
-<li>componentWillReceiveProps (only called if parent updated)</li>
-<li>shouldComponentUpdate (default: always returns true to prevent subtle bugs)<ul>
-<li>componentWillUpdate</li>
-<li>render<ul>
-<li>[children’s constructors or receive props phases]</li>
-</ul>
-</li>
-<li>componentDidUpdate</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Unmount Phases:<ul>
-<li>componentWillUnmount<ul>
-<li>[children’s componentWillUnmount]</li>
-<li>[children destroyed]</li>
-</ul>
-</li>
-<li>(destroyed): The instance is now blank, released by React and ready for GC</li>
-</ul>
-</li>
-</ul>
-<h2 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h2><ul>
+<h3 id="Class-Create-Pahses"><a href="#Class-Create-Pahses" class="headerlink" title="Class Create Pahses:"></a>Class Create Pahses:</h3><pre><code>+ getDefaultProps: invoke while class created and be shared between instances.
+</code></pre><h3 id="Initialization-Pahses"><a href="#Initialization-Pahses" class="headerlink" title="Initialization Pahses:"></a>Initialization Pahses:</h3><pre><code>+ constructor: Initialization of state. The instance is now retained.
++ componentWillMount
++ render
++ [children&apos;s constructors]
+    - [children&apos;s componentWillMount and render]
+    - [children&apos;s componentDidMount]
++ componentDidMount
+</code></pre><h3 id="Update-Phases"><a href="#Update-Phases" class="headerlink" title="Update Phases:"></a>Update Phases:</h3><pre><code>+ componentWillReceiveProps (only called if parent updated)
++ shouldComponentUpdate (default: always returns true to prevent subtle bugs)
+    - componentWillUpdate
+    - render
+        + [children&apos;s constructors or receive props phases]
+    - componentDidUpdate
+</code></pre><h3 id="Unmount-Phases"><a href="#Unmount-Phases" class="headerlink" title="Unmount Phases:"></a>Unmount Phases:</h3><pre><code>+ componentWillUnmount
+    - [children&apos;s componentWillUnmount]
+    - [children destroyed]
++ (destroyed): The instance is now blank, released by React and ready for GC
+</code></pre><h2 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h2><ul>
 <li>独立于组件的</li>
 <li>多个组件可共享的</li>
 <li>对象类型的配置</li>
@@ -348,11 +331,24 @@ var Header = React.createClass({
             );
     }
 });
-</code></pre><h2 id="React-PureRenderMixin"><a href="#React-PureRenderMixin" class="headerlink" title="React - PureRenderMixin"></a>React - PureRenderMixin</h2><ul>
+</code></pre><h2 id="React-Mixin原理"><a href="#React-Mixin原理" class="headerlink" title="React - Mixin原理"></a>React - Mixin原理</h2><ul>
+<li>Mixin必须是一个对象</li>
+<li>在React.createClass（源码：ReactClass &gt; createClass: function (spec) {…}会把Mixin对象融入react对象</li>
+<li>融入过程是通过遍历Mixin的属性（for..in）逐个添加到react对象得prototype上（mixSpecIntoComponent）</li>
+<li>添加之前需要判断是否已经有了相同属性，且此属性是否支持覆盖、是否支持多个、是否需要合并</li>
+<li>添加的方式是：覆盖（override）、合并、多个函数链</li>
+</ul>
+<h2 id="React-Mixin融合方式的标准"><a href="#React-Mixin融合方式的标准" class="headerlink" title="React - Mixin融合方式的标准"></a>React - Mixin融合方式的标准</h2><ul>
+<li>一些基础的属性是不允许覆盖的，比如：setProps、replaceProps、replaceState、isMounted</li>
+<li>渲染的属性是不允许定义多次的，比如：render、shouldComponentUpdate</li>
+<li>需要合并的是那些有返回值的，比如：getDefaultProps、getInitialState</li>
+<li>其他的都支持多个函数链的形式（先执行已有的，在执行Mixin的），比如：willMount、didMount、willUpdate、didUpdate等等</li>
+</ul>
+<h2 id="React-PureRenderMixin"><a href="#React-PureRenderMixin" class="headerlink" title="React - PureRenderMixin"></a>React - PureRenderMixin</h2><ul>
 <li>React组件的渲染函数是“纯粹的” - 同样的props和state，渲染出同样的效果</li>
 <li>可以提升性能 - 在shouldComponentUpdate里检查props、state是否会发生变化</li>
 <li>shouldComponentUpdate的判断结果会影响整个组件子树</li>
-<li>据说props、state比较是浅比较，不适合(特别)复杂的数据结构 x</li>
+<li>据说props、state比较是浅比较，不适合(特别)复杂的数据结构</li>
 </ul>
 <h2 id="PureRenderMixin-shouldComponentUpdate-shallow-check"><a href="#PureRenderMixin-shouldComponentUpdate-shallow-check" class="headerlink" title="PureRenderMixin - shouldComponentUpdate: shallow check"></a>PureRenderMixin - shouldComponentUpdate: shallow check</h2><pre><code>/**
  - Performs equality by iterating through keys on an object and returning false
@@ -385,20 +381,7 @@ function shallowEqual(objA, objB) {
 
   return true;
 }
-</code></pre><h3 id="React-Mixin原理"><a href="#React-Mixin原理" class="headerlink" title="React - Mixin原理"></a>React - Mixin原理</h3><ul>
-<li>Mixin必须是一个对象</li>
-<li>在React.createClass（源码：ReactClass &gt; createClass: function (spec) {…}会把Mixin对象融入react对象</li>
-<li>融入过程是通过遍历Mixin的属性（for..in）逐个添加到react对象得prototype上（mixSpecIntoComponent）</li>
-<li>添加之前需要判断是否已经有了相同属性，且此属性是否支持覆盖、是否支持多个、是否需要合并</li>
-<li>添加的方式是：覆盖（override）、合并、多个函数链</li>
-</ul>
-<h3 id="React-Mixin融合方式的标准"><a href="#React-Mixin融合方式的标准" class="headerlink" title="React - Mixin融合方式的标准"></a>React - Mixin融合方式的标准</h3><ul>
-<li>一些基础的属性是不允许覆盖的，比如：setProps、replaceProps、replaceState、isMounted</li>
-<li>渲染的属性是不允许定义多次的，比如：render、shouldComponentUpdate</li>
-<li>需要合并的是那些有返回值的，比如：getDefaultProps、getInitialState</li>
-<li>其他的都支持多个函数链的形式（先执行已有的，在执行Mixin的），比如：willMount、didMount、willUpdate、didUpdate等等</li>
-</ul>
-<h2 id="React-表单组件"><a href="#React-表单组件" class="headerlink" title="React - 表单组件"></a>React - 表单组件</h2><h3 id="受用户交互影响的属性"><a href="#受用户交互影响的属性" class="headerlink" title="受用户交互影响的属性"></a>受用户交互影响的属性</h3><ul>
+</code></pre><h2 id="React-表单组件"><a href="#React-表单组件" class="headerlink" title="React - 表单组件"></a>React - 表单组件</h2><h3 id="受用户交互影响的属性"><a href="#受用户交互影响的属性" class="headerlink" title="受用户交互影响的属性"></a>受用户交互影响的属性</h3><ul>
 <li>value，用于 input、textarea 组件</li>
 <li>checked，用于类型为 checkbox 或者 radio 的 input 组件</li>
 <li>selected，用于 option 组件</li>
@@ -570,6 +553,8 @@ help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos
       <a data-url="http://yoursite.com/2016/04/11/reactStart/" data-id="cimvsajy900021sja47e28hob" class="article-share-link">Delen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
     </footer>
   </div>
   
@@ -595,9 +580,23 @@ help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Labels</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/react/" style="font-size: 10px;">react</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -635,7 +634,7 @@ help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
+      &copy; 2016 alvin<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
