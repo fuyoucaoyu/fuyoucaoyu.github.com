@@ -43,7 +43,7 @@ React -start
             </script>
         </body>
     </html>
-
+[Hello React](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/helloReact/index.html)
 
 ## React - 类似的工作
     <!DOCTYPE html>
@@ -84,6 +84,7 @@ React -start
             </script>
         </body>
     </html>
+[Hello V-Dom](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/helloReact/index2.html)
 
 ## JSX - Javascript XML
 - 优势：
@@ -109,6 +110,7 @@ React -start
             </script>
         </body>
     </html>
+[Hello JSX](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/helloJSX/index.html)
 
 ## JSX - 工作原理
 1. 使用JSXTransformer通过监听windows的onload/DOMContentLoaded，来遍历所有"text/jsx"脚本标签
@@ -136,6 +138,8 @@ React -start
 - 复用那些接口定义良好的组件来开发新的模块化组件
 - 官网提供的获取子组件的方法：this.props.children X
 - 组件支持 ref="refId"，访问元素：this.refs.refId
+
+[React Component](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactComponent/index.html)
 
 ## React - 组件数据流
 - props
@@ -166,6 +170,9 @@ React -start
 
 ### 卸载
 - componentWillUnmount
+
+### Demo
+[React Lifecycle](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactLifecycle/index.html)
 
 ### Class Create Pahses:
     + getDefaultProps: invoke while class created and be shared between instances.
@@ -237,6 +244,7 @@ React -start
                 );
         }
     });
+[React Mixin](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactMixin/index.html)
 
 ## React - Mixin原理
 - Mixin必须是一个对象
@@ -256,6 +264,8 @@ React -start
 - 可以提升性能 - 在shouldComponentUpdate里检查props、state是否会发生变化
 - shouldComponentUpdate的判断结果会影响整个组件子树
 - 据说props、state比较是浅比较，不适合(特别)复杂的数据结构
+
+[React PureRenderMixin](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactPureRenderMixin/index.html)
 
 ## PureRenderMixin - shouldComponentUpdate: shallow check
     /**
@@ -326,6 +336,7 @@ React -start
     });
 
     ReactDOM.render(<App />, document.getElementById('app'));
+[React ControlledComponent](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactControlledComponent/index.html)
 
 ## React - add-ons
 - TransitionGroup和CSSTransitionGroup
@@ -355,13 +366,13 @@ React -start
     });
 
     ReactDOM.render(<App />, document.getElementById('app'));
-
+[React LinkedStateMixin](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactLinkedStateMixin/index.html)
 
 ## 开发工具webpack
 
 ### webpack + react install
 - npm init
-- npm install --save react react
+- npm install --save react react-dom
 - npm install --save-dev webpack webpack-dev-server
 - npm install --save-dev jsx-loader css-loader file-loader style-loader url-loader
 
@@ -425,6 +436,8 @@ React -start
 - npm run locDev
 - npm run serDev
 
+[React Webpack](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactWebpack/index.html)
+
 ### React - 热插拔
 - npm install --save-dev react-hot-loader
 - webpack.config.js: entry 使用数组，并添加 'webpack/hot/only-dev-server'
@@ -432,12 +445,16 @@ React -start
 - 入口文件添加 module.hot.accept()
 - 启动：webpack-dev-server -d --port 8082 --hot --progress --colors
 
+[React HotLoader](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactHotLoader/index.html)
+
 ### React - 热拔插多个入口
 - webpack.config.js: entry:
     entry: {
         main: ['./pages/main/index.js', 'webpack/hot/only-dev-server'],
         help: ['./pages/help/index.js', 'webpack/hot/only-dev-server']
     }
+
+[React HotLoaderMultiEntry](http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactHotLoaderMultiEntry/index.html)
 
 ## React - render时机
 ### 批量更新 - 事件回调函数
@@ -454,18 +471,21 @@ React -start
 - runBatchedUpdates来处理dirty components（调用对应的render）
 
 ## React - React事件系统
+### React 事件系统：
+- 浏览器事件的顶级委托（top-level delegation）用来 trap (捕获？) 大多数原生浏览器事件，可以注入事件处理器；
+- 主线程唯一的工作是注入的 ReactEventListener（是为可插拔事件源准备的事件监听器）；
+- 转发这些被 trap 原生浏览器事件至 EventPluginHub， EventPluginHub 在提取任何组合事件时会调用对应插件（比如 SimpleEventPlugin ）并返回需要处理的事件列表；
+- 事件插件包括：ResponderEventPlugin、SimpleEventPlugin、TapEventPlugin、EnterLeaveEventPlugin、ChangeEventPlugin、SelectEventPlugin、BeforeInputEventPlugin
+- EventPluginHub 同时会维护Dom、事件名称和事件处理器的Mapping；
+- ReactEventListener 监听 EventPluginHub 的事件，并处理事件派发及事件响应
+- ReactEventListener 的事件响应函数会处理用户的事件处理函数
+
+### React 事件流程
 1. React初始化时会把事件监听 ReactEventListener 注入到 ReactBrowserEventEmitter
 2. ReactBrowserEventEmitter 是浏览器事件的顶级委托，ReactEventListener 为用户绑定事件的DOM绑定自己的处理函数，并在处理函数中调用用户的事件处理函数，然后理render相关逻辑；
-3. React 事件系统：
-    - 浏览器事件的顶级委托（top-level delegation）用来 trap (捕获？) 大多数原生浏览器事件，可以注入事件处理器；
-    - 主线程唯一的工作是注入的 ReactEventListener（是为可插拔事件源准备的事件监听器）；
-    - 转发这些被 trap 原生浏览器事件至 EventPluginHub， EventPluginHub 在提取任何组合事件时会调用对应插件（比如 SimpleEventPlugin ）并返回需要处理的事件列表；
-    - 事件插件包括：ResponderEventPlugin、SimpleEventPlugin、TapEventPlugin、EnterLeaveEventPlugin、ChangeEventPlugin、SelectEventPlugin、BeforeInputEventPlugin
-    - EventPluginHub 同时会维护Dom、事件名称和事件处理器的Mapping；
-    - ReactEventListener 监听 EventPluginHub 的事件，并处理事件派发及事件响应
-    - ReactEventListener 的事件响应函数会处理用户的事件处理函数
 4. React组件及组件树的渲染都是在ReactMount里面执行
-5. 
-mount组件时，初始化组件并注册事件监听（mountComponent）
+5. mount组件时，初始化组件并注册事件监听（mountComponent）
 6. 事件响应由ReactEventListener的dispatchEvent触发，通过EventPluginHub找到事件处理相关 
 7. 我们的事件函数作为回调处理
+
+

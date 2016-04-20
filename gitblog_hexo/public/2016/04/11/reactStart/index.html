@@ -29,7 +29,7 @@ React认为HTML标签及生成这些标签的代码间存在着内在联系，Re
 
 Why React?
 简单:model改变后，react自动处理用户界面的更新；">
-<meta property="og:updated_time" content="2016-04-12T02:34:02.505Z">
+<meta property="og:updated_time" content="2016-04-12T15:01:51.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="reactStart">
 <meta name="twitter:description" content="React -start
@@ -147,7 +147,8 @@ Why React?
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h2 id="React-类似的工作"><a href="#React-类似的工作" class="headerlink" title="React - 类似的工作"></a>React - 类似的工作</h2><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/helloReact/index.html" target="_blank" rel="external">Hello React</a></p>
+<h2 id="React-类似的工作"><a href="#React-类似的工作" class="headerlink" title="React - 类似的工作"></a>React - 类似的工作</h2><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;React Hello World&lt;/title&gt;
@@ -185,7 +186,8 @@ Why React?
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h2 id="JSX-Javascript-XML"><a href="#JSX-Javascript-XML" class="headerlink" title="JSX - Javascript XML"></a>JSX - Javascript XML</h2><ul>
+</code></pre><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/helloReact/index2.html" target="_blank" rel="external">Hello V-Dom</a></p>
+<h2 id="JSX-Javascript-XML"><a href="#JSX-Javascript-XML" class="headerlink" title="JSX - Javascript XML"></a>JSX - Javascript XML</h2><ul>
 <li>优势：<ul>
 <li>类HTML标记语言，都是熟悉的语法</li>
 <li>抽象了React Element的创建过程</li>
@@ -212,7 +214,8 @@ Why React?
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h2 id="JSX-工作原理"><a href="#JSX-工作原理" class="headerlink" title="JSX - 工作原理"></a>JSX - 工作原理</h2><ol>
+</code></pre><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/helloJSX/index.html" target="_blank" rel="external">Hello JSX</a></p>
+<h2 id="JSX-工作原理"><a href="#JSX-工作原理" class="headerlink" title="JSX - 工作原理"></a>JSX - 工作原理</h2><ol>
 <li>使用JSXTransformer通过监听windows的onload/DOMContentLoaded，来遍历所有”text/jsx”脚本标签</li>
 <li>获取每个标签的source code并把JSX代码转为react的虚拟dom代码</li>
 <li>最后把react代码添加到新建的script标签中</li>
@@ -239,6 +242,7 @@ Why React?
 <li>官网提供的获取子组件的方法：this.props.children X</li>
 <li>组件支持 ref=”refId”，访问元素：this.refs.refId</li>
 </ul>
+<p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactComponent/index.html" target="_blank" rel="external">React Component</a></p>
 <h2 id="React-组件数据流"><a href="#React-组件数据流" class="headerlink" title="React - 组件数据流"></a>React - 组件数据流</h2><ul>
 <li>props</li>
 <li>state</li>
@@ -267,6 +271,7 @@ Why React?
 <h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><ul>
 <li>componentWillUnmount</li>
 </ul>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactLifecycle/index.html" target="_blank" rel="external">React Lifecycle</a></p>
 <h3 id="Class-Create-Pahses"><a href="#Class-Create-Pahses" class="headerlink" title="Class Create Pahses:"></a>Class Create Pahses:</h3><pre><code>+ getDefaultProps: invoke while class created and be shared between instances.
 </code></pre><h3 id="Initialization-Pahses"><a href="#Initialization-Pahses" class="headerlink" title="Initialization Pahses:"></a>Initialization Pahses:</h3><pre><code>+ constructor: Initialization of state. The instance is now retained.
 + componentWillMount
@@ -331,7 +336,8 @@ var Header = React.createClass({
             );
     }
 });
-</code></pre><h2 id="React-Mixin原理"><a href="#React-Mixin原理" class="headerlink" title="React - Mixin原理"></a>React - Mixin原理</h2><ul>
+</code></pre><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactMixin/index.html" target="_blank" rel="external">React Mixin</a></p>
+<h2 id="React-Mixin原理"><a href="#React-Mixin原理" class="headerlink" title="React - Mixin原理"></a>React - Mixin原理</h2><ul>
 <li>Mixin必须是一个对象</li>
 <li>在React.createClass（源码：ReactClass &gt; createClass: function (spec) {…}会把Mixin对象融入react对象</li>
 <li>融入过程是通过遍历Mixin的属性（for..in）逐个添加到react对象得prototype上（mixSpecIntoComponent）</li>
@@ -350,6 +356,7 @@ var Header = React.createClass({
 <li>shouldComponentUpdate的判断结果会影响整个组件子树</li>
 <li>据说props、state比较是浅比较，不适合(特别)复杂的数据结构</li>
 </ul>
+<p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactPureRenderMixin/index.html" target="_blank" rel="external">React PureRenderMixin</a></p>
 <h2 id="PureRenderMixin-shouldComponentUpdate-shallow-check"><a href="#PureRenderMixin-shouldComponentUpdate-shallow-check" class="headerlink" title="PureRenderMixin - shouldComponentUpdate: shallow check"></a>PureRenderMixin - shouldComponentUpdate: shallow check</h2><pre><code>/**
  - Performs equality by iterating through keys on an object and returning false
  - when any key has values which are not strictly equal between the arguments.
@@ -414,7 +421,8 @@ function shallowEqual(objA, objB) {
 });
 
 ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;app&apos;));
-</code></pre><h2 id="React-add-ons"><a href="#React-add-ons" class="headerlink" title="React - add-ons"></a>React - add-ons</h2><ul>
+</code></pre><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactControlledComponent/index.html" target="_blank" rel="external">React ControlledComponent</a></p>
+<h2 id="React-add-ons"><a href="#React-add-ons" class="headerlink" title="React - add-ons"></a>React - add-ons</h2><ul>
 <li>TransitionGroup和CSSTransitionGroup</li>
 <li>LinkedStateMixin - 用于简化用户表单输入数据和组件 state 之间的双向数据绑定</li>
 <li>classSet，用于更加干净简洁地操作 DOM 中的 class 字符串</li>
@@ -441,9 +449,10 @@ var App = React.createClass({
 });
 
 ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;app&apos;));
-</code></pre><h2 id="开发工具webpack"><a href="#开发工具webpack" class="headerlink" title="开发工具webpack"></a>开发工具webpack</h2><h3 id="webpack-react-install"><a href="#webpack-react-install" class="headerlink" title="webpack + react install"></a>webpack + react install</h3><ul>
+</code></pre><p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactLinkedStateMixin/index.html" target="_blank" rel="external">React LinkedStateMixin</a></p>
+<h2 id="开发工具webpack"><a href="#开发工具webpack" class="headerlink" title="开发工具webpack"></a>开发工具webpack</h2><h3 id="webpack-react-install"><a href="#webpack-react-install" class="headerlink" title="webpack + react install"></a>webpack + react install</h3><ul>
 <li>npm init</li>
-<li>npm install –save react react</li>
+<li>npm install –save react react-dom</li>
 <li>npm install –save-dev webpack webpack-dev-server</li>
 <li>npm install –save-dev jsx-loader css-loader file-loader style-loader url-loader</li>
 </ul>
@@ -503,6 +512,7 @@ module.exports = {
 <li>npm run locDev</li>
 <li>npm run serDev</li>
 </ul>
+<p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactWebpack/index.html" target="_blank" rel="external">React Webpack</a></p>
 <h3 id="React-热插拔"><a href="#React-热插拔" class="headerlink" title="React - 热插拔"></a>React - 热插拔</h3><ul>
 <li>npm install –save-dev react-hot-loader</li>
 <li>webpack.config.js: entry 使用数组，并添加 ‘webpack/hot/only-dev-server’</li>
@@ -510,11 +520,13 @@ module.exports = {
 <li>入口文件添加 module.hot.accept()</li>
 <li>启动：webpack-dev-server -d –port 8082 –hot –progress –colors</li>
 </ul>
+<p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactHotLoader/index.html" target="_blank" rel="external">React HotLoader</a></p>
 <h3 id="React-热拔插多个入口"><a href="#React-热拔插多个入口" class="headerlink" title="React - 热拔插多个入口"></a>React - 热拔插多个入口</h3><ul>
 <li>webpack.config.js: entry:<br>  entry: {<pre><code>main: [&apos;./pages/main/index.js&apos;, &apos;webpack/hot/only-dev-server&apos;],
 help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos;]
 </code></pre>  }</li>
 </ul>
+<p><a href="http://cp01-rdqa-dev171.cp01.baidu.com:8082/react/react-demo/reactHotLoaderMultiEntry/index.html" target="_blank" rel="external">React HotLoaderMultiEntry</a></p>
 <h2 id="React-render时机"><a href="#React-render时机" class="headerlink" title="React - render时机"></a>React - render时机</h2><h3 id="批量更新-事件回调函数"><a href="#批量更新-事件回调函数" class="headerlink" title="批量更新 - 事件回调函数"></a>批量更新 - 事件回调函数</h3><ul>
 <li>事件处理函数中的多次setState/replaceState会被标记为一次批量更新</li>
 <li>事件处理函数本身在React事件机制中是作为一个回调函数被调用，在函数执行完成后才会触发render</li>
@@ -528,10 +540,7 @@ help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos
 <li>标记组件为需要重新渲染的组件（dirty components list）ReactUpdates：enqueueUpdate()</li>
 <li>runBatchedUpdates来处理dirty components（调用对应的render）</li>
 </ul>
-<h2 id="React-React事件系统"><a href="#React-React事件系统" class="headerlink" title="React - React事件系统"></a>React - React事件系统</h2><ol>
-<li>React初始化时会把事件监听 ReactEventListener 注入到 ReactBrowserEventEmitter</li>
-<li>ReactBrowserEventEmitter 是浏览器事件的顶级委托，ReactEventListener 为用户绑定事件的DOM绑定自己的处理函数，并在处理函数中调用用户的事件处理函数，然后理render相关逻辑；</li>
-<li>React 事件系统：<ul>
+<h2 id="React-React事件系统"><a href="#React-React事件系统" class="headerlink" title="React - React事件系统"></a>React - React事件系统</h2><h3 id="React-事件系统："><a href="#React-事件系统：" class="headerlink" title="React 事件系统："></a>React 事件系统：</h3><ul>
 <li>浏览器事件的顶级委托（top-level delegation）用来 trap (捕获？) 大多数原生浏览器事件，可以注入事件处理器；</li>
 <li>主线程唯一的工作是注入的 ReactEventListener（是为可插拔事件源准备的事件监听器）；</li>
 <li>转发这些被 trap 原生浏览器事件至 EventPluginHub， EventPluginHub 在提取任何组合事件时会调用对应插件（比如 SimpleEventPlugin ）并返回需要处理的事件列表；</li>
@@ -540,7 +549,9 @@ help: [&apos;./pages/help/index.js&apos;, &apos;webpack/hot/only-dev-server&apos
 <li>ReactEventListener 监听 EventPluginHub 的事件，并处理事件派发及事件响应</li>
 <li>ReactEventListener 的事件响应函数会处理用户的事件处理函数</li>
 </ul>
-</li>
+<h3 id="React-事件流程"><a href="#React-事件流程" class="headerlink" title="React 事件流程"></a>React 事件流程</h3><ol>
+<li>React初始化时会把事件监听 ReactEventListener 注入到 ReactBrowserEventEmitter</li>
+<li>ReactBrowserEventEmitter 是浏览器事件的顶级委托，ReactEventListener 为用户绑定事件的DOM绑定自己的处理函数，并在处理函数中调用用户的事件处理函数，然后理render相关逻辑；</li>
 <li>React组件及组件树的渲染都是在ReactMount里面执行</li>
 <li>mount组件时，初始化组件并注册事件监听（mountComponent）</li>
 <li>事件响应由ReactEventListener的dispatchEvent触发，通过EventPluginHub找到事件处理相关 </li>
